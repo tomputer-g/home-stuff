@@ -6,6 +6,16 @@ Uses a Circuitpython board and a light sensor in conjunction with ClickMonitorDD
 
 Difficulty: trivial (<1 hr)
 
+## Dependencies
+
+Hardware: QT PY M0 with CircuitPython installed;
+
++5V -- LDR -- A3 -- R1K -- GND.
+
+Software: VSCode or Thonny with serial monitor.
+
+Packages: adafruit_hid (https://github.com/adafruit/Adafruit_CircuitPython_HID), Neopixel (https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel)
+
 ## How it works
 
 The Circuitpython board (I used a [QT PY SAMD21](https://learn.adafruit.com/adafruit-qt-py?view=all) board) is connected with a Light Dependent Resistor (LDR) on a small breadboard, placed in a spot where the lighting of the room is consistent and not easily affected by the screens themselves or other bulbs in the room. The LDR is read periodically by the QT PY, which uses the read voltage and a rough estimate (by my preference) of when to change the screen brightness to decide the target screen brightness.
